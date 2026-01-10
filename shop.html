@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - SunnyBlooms.CO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">SunnyBlooms.Co</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><span class="cart-icon" id="cartIcon">🛍️ Cart (0)</span></li>
+        </ul>
+    </nav>
+
+    <section class="hero" style="height: 30vh; min-height: 250px;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Our <span>Collection</span></h1>
+            <p>Fresh blooms harvested for you</p>
+        </div>
+    </section>
+
+        <section class="filter-section">
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterProducts('all', this)">All Flowers</button>
+            <button class="filter-btn" onclick="filterProducts('roses', this)">Roses</button>
+            <button class="filter-btn" onclick="filterProducts('seasonal', this)">Seasonal</button>
+            <button class="filter-btn" onclick="filterProducts('lilies', this)">Lilies</button>
+            <button class="filter-btn" onclick="filterProducts('tulips', this)">Tulips</button>
+        </div>
+    </section>
+    <section class="container">
+        <div class="shop-grid" id="productGrid">
+            
+            <div class="product-card" data-category="roses">
+                <span class="product-badge">Bestseller</span>
+                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1562690868-60bbe7293e94?auto=format&fit=crop&q=80&w=800')"></div>
+                <div class="product-info">
+                    <div class="product-category">Roses</div>
+                    <h3>Classic Red Roses</h3>
+                    <p class="price">$149.00</p>
+                    <button class="add-btn" onclick="addToCart('Red Roses', 149)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="roses">
+                <div class="product-img" style="background-image: url('https://thursd.com/storage/media/47573/Rose-Noelia-white-arrangement-on-Thursd.jpg')"></div>
+                <div class="product-info">
+                    <div class="product-category">Roses</div>
+                    <h3>Pure White Roses</h3>
+                    <p class="price">$139.00</p>
+                    <button class="add-btn" onclick="addToCart('White Roses', 139)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="roses">
+                <div class="product-img" style="background-image: url('https://albanyflorist.co.nz/wp-content/uploads/2017/08/Soft-pink-roses-Small.jpg')"></div>
+                <div class="product-info">
+                    <div class="product-category">Roses</div>
+                    <h3>Soft Pink Roses</h3>
+                    <p class="price">$139.00</p>
+                    <button class="add-btn" onclick="addToCart('Pink Roses', 139)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="roses">
+                <div class="product-img" style="background-image: url('https://gardenerspath.com/wp-content/uploads/2022/07/Best-Yellow-Roses-Feature.jpg')"></div>
+                <div class="product-info">
+                    <div class="product-category">Roses</div>
+                    <h3>Sunny Yellow Roses</h3>
+                    <p class="price">$129.00</p>
+                    <button class="add-btn" onclick="addToCart('Yellow Roses', 129)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="roses">
+                <div class="product-img" style="background-image: url('https://images.alphacoders.com/679/thumb-1920-679675.jpg')"></div>
+                <div class="product-info">
+                    <div class="product-category">Roses</div>
+                    <h3>Lavender Roses</h3>
+                    <p class="price">$159.00</p>
+                    <button class="add-btn" onclick="addToCart('Lavender Roses', 159)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="seasonal">
+                <div class="product-img" style="background-image: url('https://gardenerspath.com/wp-content/uploads/2024/04/Best-Pink-Peonies-FB.jpg')"></div>
+                <div class="product-info">
+                    <div class="product-category">Seasonal</div>
+                    <h3>Pink Peonies</h3>
+                    <p class="price">$89.00</p>
+                    <button class="add-btn" onclick="addToCart('Pink Peonies', 89)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="seasonal">
+                <div class="product-img" style="background-image: url('https://flowersmanila.com/cdn/shop/products/296582392_623541682280003_5695555043883292808_n.jpg?v=1659291106')"></div>
+                <div class="product-info">
+                    <div class="product-category">Seasonal</div>
+                    <h3>Sunflowers</h3>
+                    <p class="price">$79.00</p>
+                    <button class="add-btn" onclick="addToCart('Sunflowers', 79)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="seasonal">
+                <div class="product-img" style="background-image: url('https://jamescressflorist.com/cdn/shop/files/191509sjwv1x_bb02204f-52b8-47f7-a25c-3a9367ac638c_grande.jpg?v=1750812082https://images.unsplash.com/photo-1501923233121-65c363dc0e1a?auto=format&fit=crop&q=80&w=800')"></div>
+                <div class="product-info">
+                    <div class="product-category">Seasonal</div>
+                    <h3>Blue Hydrangeas</h3>
+                    <p class="price">$105.00</p>
+                    <button class="add-btn" onclick="addToCart('Blue Hydrangeas', 105)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="seasonal">
+                <div class="product-img" style="background-image: url('https://cdn11.bigcommerce.com/s-s00dfko9/images/stencil/1280x1280/products/236/2122/white_orchids_bouquet_manila_3__60181.1706784994.jpg?c=2')"></div>
+                <div class="product-info">
+                    <div class="product-category">Seasonal</div>
+                    <h3>White Orchids</h3>
+                    <p class="price">$135.00</p>
+                    <button class="add-btn" onclick="addToCart('White Orchids', 135)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="seasonal">
+                <div class="product-img" style="background-image: url('https://img.freepik.com/premium-photo/bouquet-daisies-hand-against-background-chamomile-field_270100-3529.jpg')"></div>
+                <div class="product-info">
+                    <div class="product-category">Seasonal</div>
+                    <h3>Field Daisies</h3>
+                    <p class="price">$55.00</p>
+                    <button class="add-btn" onclick="addToCart('Field Daisies', 55)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="lilies">
+                <span class="product-badge">Fragrant</span>
+                <div class="product-img" style="background-image: url('https://asset.bloomnation.com/c_limit,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto,w_1005/v1605611859/vendor/6172/catalog/product/2/0/20170814114825_file_599236c947a28.jpg')"></div>
+                <div class="product-info">
+                    <div class="product-category">Lilies</div>
+                    <h3>White Casablanca</h3>
+                    <p class="price">$119.00</p>
+                    <button class="add-btn" onclick="addToCart('White Lilies', 119)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="lilies">
+                <div class="product-img" style="background-image: url('https://cdn.uaeflowers.com/uploads/product/uaeflowers/12-Pink-Roses-In-A-Brown-Bouquets_44_1378.webp')"></div>
+                <div class="product-info">
+                    <div class="product-category">Lilies</div>
+                    <h3>Pink Stargazers</h3>
+                    <p class="price">$125.00</p>
+                    <button class="add-btn" onclick="addToCart('Pink Stargazers', 125)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="lilies">
+                <div class="product-img" style="background-image: url('https://beaudryflowers.ca/cdn/shop/products/FE45_330x370_best_grande.jpg?v=152670495')"></div>
+                <div class="product-info">
+                    <div class="product-category">Lilies</div>
+                    <h3>Elegant Calla Lilies</h3>
+                    <p class="price">$145.00</p>
+                    <button class="add-btn" onclick="addToCart('Calla Lilies', 145)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="lilies">
+                <div class="product-img" style="background-image: url('https://images.immediate.co.uk/production/volatile/sites/10/2024/09/2048x1365-Lilium-bulbiferum-SEO-GettyImages-1497218119-5f835cd.jpg')"></div>
+                <div class="product-info">
+                    <div class="product-category">Lilies</div>
+                    <h3>Orange Lilies</h3>
+                    <p class="price">$110.00</p>
+                    <button class="add-btn" onclick="addToCart('Orange Lilies', 110)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="lilies">
+                <div class="product-img" style="background-image: url('https://cdn.mos.cms.futurecdn.net/eBoAbFFP2kifVvSK7U7EPG.jpg')"></div>
+                <div class="product-info">
+                    <div class="product-category">Lilies</div>
+                    <h3>Peruvian Lilies</h3>
+                    <p class="price">$85.00</p>
+                    <button class="add-btn" onclick="addToCart('Peruvian Lilies', 85)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="tulips">
+                <div class="product-img" style="background-image: url('https://www.gardenia.net/wp-content/uploads/2024/08/221535-MR-Tulipa-Red.jpg')"></div>
+                <div class="product-info">
+                    <div class="product-category">Tulips</div>
+                    <h3>Passion Red Tulips</h3>
+                    <p class="price">$95.00</p>
+                    <button class="add-btn" onclick="addToCart('Red Tulips', 95)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="tulips">
+                <div class="product-img" style="background-image: url('https://images.immediate.co.uk/production/volatile/sites/10/2018/02/781657be-6547-4dd3-8c39-d0358426c2d9-e7b04d7.jpg')"></div>
+                <div class="product-info">
+                    <div class="product-category">Tulips</div>
+                    <h3>Royal Purple Tulips</h3>
+                    <p class="price">$95.00</p>
+                    <button class="add-btn" onclick="addToCart('Purple Tulips', 95)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="tulips">
+                <div class="product-img" style="background-image: url('https://www.epicgardening.com/wp-content/uploads/2023/09/yellow-tulips-1600x900.jpeg')"></div>
+                <div class="product-info">
+                    <div class="product-category">Tulips</div>
+                    <h3>Bright Yellow Tulips</h3>
+                    <p class="price">$95.00</p>
+                    <button class="add-btn" onclick="addToCart('Yellow Tulips', 95)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="tulips">
+                <div class="product-img" style="background-image: url('https://www.fnp.com/images/pr/philippines/x/v20220111162905/lovely-pink-n-light-pink-tulips-bouquet_1.jpg')"></div>
+                <div class="product-info">
+                    <div class="product-category">Tulips</div>
+                    <h3>Soft Pink Tulips</h3>
+                    <p class="price">$95.00</p>
+                    <button class="add-btn" onclick="addToCart('Pink Tulips', 95)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="tulips">
+                <div class="product-img" style="background-image: url('https://www.manilagiftshop.com/images/detailed/7/tulips-new-04.jpg')"></div>
+                <div class="product-info">
+                    <div class="product-category">Tulips</div>
+                    <h3>Snow White Tulips</h3>
+                    <p class="price">$95.00</p>
+                    <button class="add-btn" onclick="addToCart('White Tulips', 95)">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+        <p style="opacity: 0.6; margin-top: 40px;">© 2026 SunnyBlooms.CO. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
