@@ -563,3 +563,241 @@ body {
     cursor: pointer;
 }
 .dot.active { background: white; width: 12px; border-radius: 10px; }
+/* ... [Keep all the CSS you provided above here] ... */
+
+/* --- LOGIN PAGE SPECIFIC STYLES --- */
+.login-page {
+    background-color: var(--bg-light-pink);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.login-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px; /* Space for navbar */
+}
+
+.login-card {
+    background: var(--white);
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(214, 51, 132, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-card h2 {
+    font-family: var(--font-heading);
+    color: var(--pink-dark);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.accent-text {
+    font-family: var(--font-accent);
+    color: var(--purple-primary);
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+    text-align: left;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #eee;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    transition: 0.3s ease;
+    outline: none;
+}
+
+/* Red Error States */
+.error-text {
+    color: var(--rose-dark);
+    font-size: 0.85rem;
+    margin-top: 5px;
+    margin-left: 15px;
+    display: none; /* Hidden by default */
+}
+
+.input-error {
+    border-color: var(--rose-dark) !important;
+    background-color: #fff2f2;
+}
+
+.login-submit {
+    width: 100%;
+    margin-top: 10px;
+    background-color: var(--pink-dark);
+    color: var(--white);
+}
+
+.login-submit:hover {
+    background-color: var(--rose-dark);
+}
+
+/* Registration Specific Tweaks */
+.registration-card {
+    max-width: 550px; /* Slightly wider to accommodate two columns */
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.input-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--purple-primary);
+    margin-left: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.checkbox-container {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: auto;
+    cursor: pointer;
+    accent-color: var(--pink-dark);
+}
+
+.checkbox-item a {
+    color: var(--pink-dark);
+    text-decoration: underline;
+}
+
+/* Ensure mobile responsiveness */
+@media (max-width: 480px) {
+    .input-row {
+        grid-template-columns: 1fr;
+    }
+}
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 140px;
+    box-shadow: 0px 8px 16px rgba(214, 51, 132, 0.1);
+    border-radius: 12px;
+    z-index: 1001;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    overflow: hidden;
+    border: 1px solid var(--bg-light-pink);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: var(--gray-dark);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.85rem;
+    transition: background 4s;
+    text-align: center;
+}
+
+/* Hover effect on dropdown links */
+.dropdown-content a:hover {
+    background-color: var(--bg-light-pink);
+    color: var(--pink-dark);
+}
+
+.dropdown-content.show {
+    display: block !important;
+}
+
+/* Ensure the hover doesn't interfere if you prefer click-only */
+.dropdown:hover .dropdown-content {
+    display: none; 
+}
+/* Re-enable display block only for the .show class */
+.dropdown:hover .dropdown-content.show {
+    display: block;
+}
+
+/* Modal Background */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.5); 
+    backdrop-filter: blur(5px);
+}
+
+/* Modal Box */
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto; 
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%; 
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto; /* Makes the terms scrollable */
+    position: relative;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: var(--pink-dark);
+}
+
+.terms-text h3 {
+    color: var(--pink-dark);
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.terms-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
