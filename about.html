@@ -10,13 +10,20 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo">SunnyBlooms.CO</div>
+        <div class="logo">SunnyBlooms.Co</div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
-            <li><a href="about.html" class="active">About</a></li>
-        </ul>
-    </nav>
+            <li><a href="about.html" class="active">About</a></li> <li class="dropdown">
+                <a href="#" class="dropbtn" id="account-link">Account ▾</a>
+                <div class="dropdown-content">
+                    <a href="login.html">Log In</a>
+                    <a href="registration.html">Sign Up</a>
+                </div>
+            </li>
+            <li><span class="cart-icon" id="cartIcon">🛍️ Cart (0)</span></li>
+        </ul> 
+    </nav> 
 
     <section class="hero">
         <div class="hero-overlay"></div>
@@ -43,29 +50,28 @@
 
     <section class="quote-section">
         <div style="max-width: 1000px; margin: 0 auto;">
-            <h2 style="font-family: var(--f-serif); font-size: 3rem; color: var(--rose-dark); margin-bottom: 50px;">Our Values</h2>
+            <h2 style="font-family: var(--font-heading); font-size: 3rem; color: var(--pink-dark); margin-bottom: 50px;">Our Values</h2>
             <div class="features">
                 <div class="feature-card">
                     <span>🌸</span>
-                    <h3 style="font-family: var(--f-serif); font-size: 1.8rem; color: var(--rose-dark); margin-bottom: 15px;">Quality First</h3>
+                    <h3>Quality First</h3>
                     <p>We source only the freshest blooms to ensure every arrangement exceeds expectations.</p>
                 </div>
                 <div class="feature-card">
                     <span>💚</span>
-                    <h3 style="font-family: var(--f-serif); font-size: 1.8rem; color: var(--rose-dark); margin-bottom: 15px;">Sustainability</h3>
+                    <h3>Sustainability</h3>
                     <p>We're committed to eco-friendly practices and supporting local growers.</p>
                 </div>
                 <div class="feature-card">
                     <span>✨</span>
-                    <h3 style="font-family: var(--f-serif); font-size: 1.8rem; color: var(--rose-dark); margin-bottom: 15px;">Artistry</h3>
+                    <h3>Artistry</h3>
                     <p>Each bouquet is a unique creation, designed with passion and timeless elegance.</p>
                 </div>
                 <div class="feature-card">
                     <span>💖</span>
-                    <h3 style="font-family: var(--f-serif); font-size: 1.8rem; color: var(--rose-dark); margin-bottom: 15px;">Passion</h3>
+                    <h3>Passion</h3>
                     <p>Each design is made with passion and care.</p>
                 </div>
-            </div>
             </div>
         </div>
     </section>
@@ -76,19 +82,19 @@
             <p>Come experience the fragrance of SunnyBlooms in person</p>
         </div>
         <div style="max-width: 900px; margin: 0 auto; border-radius: 15px; overflow: hidden; height: 400px;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d120.9842195!3d14.5995124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c90266a2277d%3A0x6c1c15c8e763e13d!2sManila%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345!2d120.9842!3d14.5995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDM1JzU4LjIiTiAxMjDCsDU5JzAzLjEiRQ!5e0!3m2!1sen!2sph!4v123456789" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
     <footer class="footer">
         <div class="footer-content">
             <div>
-                <h3>SunnyBlooms.</coh3>
-                <p>Bringing beauty and elegance to every occasion since 2020. Each bouquet is carefully crafted with love.</p>
+                <h3>SunnyBlooms.Co</h3> <p>Bringing beauty and elegance to every occasion since 2026. Each bouquet is carefully crafted with love.</p>
             </div>
             <div>
                 <h3>Quick Links</h3>
                 <p><a href="about.html">About Us</a></p>
+                <p><a href="shop.html">Shop Flowers</a></p>
             </div>
             <div>
                 <h3>Contact</h3>
@@ -97,8 +103,9 @@
                 <p>✉️ hello@sunnyblooms.co</p>
             </div>
         </div>
-        <p style="opacity: 0.6; margin-top: 40px;">&copy; 2026 SunnyBlooms.Co. All rights reserved.</p>
+        <p style="opacity: 0.6; margin-top: 40px;">© 2026 SunnyBlooms.Co. All rights reserved.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
