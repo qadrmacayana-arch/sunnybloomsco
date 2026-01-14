@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | SunnyBlooms.Co</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Dancing+Script&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+    <nav class="navbar">
+        <div class="logo">SunnyBlooms.Co</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn" id="account-link">Account ▾</a>
+                <div class="dropdown-content">
+                    <a href="login.html">Log In</a>
+                    <a href="registration.html" class="active">Sign Up</a>
+                </div>
+            </li>
+        </ul> 
+    </nav> 
+        
+    <div class="login-container">
+        <div class="login-card registration-card">
+            <h2>Join Us</h2>
+            <p class="accent-text">Create your blooming account</p>
+            
+            <form id="registerForm">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label class="input-label">First Name</label>
+                        <input type="text" id="reg-fname" placeholder="First Name" required>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Last Name</label>
+                        <input type="text" id="reg-lname" placeholder="Last Name" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">Email Address</label>
+                    <input type="email" id="reg-email" placeholder="Email Address" required>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label class="input-label">Password</label>
+                        <input type="password" id="reg-password" placeholder="Password" required>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Confirm</label>
+                        <input type="password" id="reg-confirm" placeholder="Confirm Password" required>
+                    </div>
+                </div>
+                <div id="pass-error" class="error-text">Passwords do not match</div>
+
+                <div class="input-group">
+                    <label class="input-label">Birthday</label>
+                    <input type="date" id="reg-dob" required>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label class="input-label">Phone</label>
+                        <input type="tel" id="reg-phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">City</label>
+                        <input type="text" id="reg-location" placeholder="City/Location" required>
+                    </div>
+                </div>
+
+                <div class="checkbox-container">
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="terms" required>
+                        <span>I agree to the <a href="#" id="openTerms">Terms & Conditions</a></span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="newsletter">
+                        <span>Receive emails and special offers ✨</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="primary-btn login-submit">Register Now</button>
+            </form>
+
+            <div class="register-link">
+                <p>Already have an account? <a href="login.html">Log in here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="terms-header">
+                <h2>Terms & Conditions</h2>
+                <p>Last updated: January 14, 2026</p>
+            </div>
+            <div class="terms-body">
+                <p>Welcome to SunnyBlooms.co. By using our services, you agree to these terms.</p>
+                <h3>1. Eligibility</h3>
+                <p>You must be at least 18 years old to use our Services.</p>
+                <h3>2. Intellectual Property</h3>
+                <p>All content on SunnyBlooms.co is property of SunnyBlooms.co.</p>
+                <h3>3. User Accounts</h3>
+                <p>You are responsible for maintaining the confidentiality of your password.</p>
+                <h3>4. Orders & Payments</h3>
+                <p>We reserve the right to refuse or cancel any order at our discretion.</p>
+                <h3>5. Prohibited Conduct</h3>
+                <p>You may not attempt to hack or disrupt our systems.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h3>SunnyBlooms.Co</h3>
+        <p>Bringing nature's beauty to your screen.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

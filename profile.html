@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | SunnyBlooms.Co</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+    <nav class="navbar">
+        <div class="logo">SunnyBlooms.Co</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn" id="account-link">Account ▾</a>
+                <div class="dropdown-content">
+                    </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="login-container">
+        <div class="registration-card">
+            <h2>Member Profile</h2>
+            <p class="accent-text">Welcome back to your garden</p>
+
+            <div class="profile-display" id="profile-info">
+                <p>Loading your profile...</p>
+            </div>
+
+            <div style="margin-top: 30px; display: flex; gap: 15px;">
+                <a href="shop.html" class="primary-btn" style="text-decoration: none; text-align: center; display: block;">Start Shopping</a>
+                <button id="edit-profile-btn" class="primary-btn" style="background: var(--purple-primary);">Edit Info</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h3>SunnyBlooms.Co</h3>
+        <p>Bringing nature's beauty to your screen.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Specific Profile Page Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            const profileInfo = document.getElementById('profile-info');
+
+            if (!currentUser) {
+                // If not logged in, kick them back to login page
+                window.location.href = 'login.html';
+                return;
+            }
+
+            // Display the user data
+            profileInfo.innerHTML = `
+                <div class="input-row" style="text-align: left; border-bottom: 1px solid #eee; padding-bottom: 20px;">
+                    <div>
+                        <label class="input-label">Full Name</label>
+                        <p style="font-weight: 600; padding-left: 15px;">${currentUser.firstName} ${currentUser.lastName}</p>
+                    </div>
+                    <div>
+                        <label class="input-label">Email</label>
+                        <p style="font-weight: 600; padding-left: 15px;">${currentUser.email}</p>
+                    </div>
+                </div>
+
+                <div class="input-row" style="text-align: left; padding-top: 20px;">
+                    <div>
+                        <label class="input-label">Phone Number</label>
+                        <p style="padding-left: 15px;">${currentUser.phone || 'Not provided'}</p>
+                    </div>
+                    <div>
+                        <label class="input-label">Location</label>
+                        <p style="padding-left: 15px;">${currentUser.location || 'Not provided'}</p>
+                    </div>
+                </div>
+
+                <div class="input-group" style="margin-top: 20px;">
+                    <label class="input-label">Member Since</label>
+                    <p style="padding-left: 15px;">January 2026</p>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | SunnyBlooms.Co</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Dancing+Script&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+    <nav class="navbar">
+    <div class="logo">SunnyBlooms.Co</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html" >About</a></li>
+        
+        <li class="dropdown">
+            <a href="#" class="dropbtn" class="active" id="account-link">Account ▾</a>
+            <div class="dropdown-content">
+                <a href="login.html"class="active">Log In</a>
+                <a href="registration.html">Sign Up</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+    <div class="login-container">
+        <div class="login-card">
+            <h2>Welcome Back</h2>
+            <p class="accent-text">Enter your details to sign in</p>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <div id="error-box" class="error-text">no user found</div>
+                </div>
+
+                <button type="submit" class="primary-btn login-submit">Log In</button>
+            </form>
+
+            <div class="register-link">
+                <p>don't have account? <a href="registration.html">Register Now!</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h3>SunnyBlooms.Co</h3>
+        <p>Bringing nature's beauty to your screen.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
